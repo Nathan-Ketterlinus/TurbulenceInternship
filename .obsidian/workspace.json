@@ -4,22 +4,71 @@
     "type": "split",
     "children": [
       {
-        "id": "a776028b328f7fd3",
+        "id": "07ee5c16a72413bd",
         "type": "tabs",
         "children": [
           {
-            "id": "9e33cf887c8d8c7a",
+            "id": "f6c431641ad13a7c",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "99 - CONFIG/Media/Pasted image 20250527130857.png"
+                "file": "03 - Background/Nudging NN summary.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250527130857"
+              "icon": "lucide-file",
+              "title": "Nudging NN summary"
+            }
+          },
+          {
+            "id": "5926441886712ed6",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "04 - References/LaytonEtAl.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "LaytonEtAl"
+            }
+          },
+          {
+            "id": "ffb34cd3b67f4399",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03 - Background/Neural Network & Deep Learning for Dummies.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Neural Network & Deep Learning for Dummies"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -76,7 +125,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 278.5
   },
   "right": {
     "id": "40c904051d379d98",
@@ -92,6 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "03 - Background/Neural Network & Deep Learning for Dummies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +151,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Neural Network & Deep Learning for Dummies"
             }
           },
           {
@@ -138,21 +188,41 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "01 - Meetings/5-27.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
+              "title": "Outline of 5-27"
+            }
+          },
+          {
+            "id": "cb3979f36344dc98",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "11e1e03fb9e8fb58",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,22 +234,45 @@
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "pomodoro-timer:Toggle timer panel": false
     }
   },
-  "active": "7118f5f67d28a83a",
+  "active": "ffb34cd3b67f4399",
   "lastOpenFiles": [
-    "create a link.md",
-    "99 - CONFIG/Media/Pasted image 20250527130857.png",
-    "01 - Meetings/5-27.md",
-    "99 - CONFIG/Media",
-    "99 - CONFIG/Media/Pasted image 20250527131148.png",
+    "03 - Background/Nudging NN summary.md",
+    "03 - Background/Simplified Bardina Equation.md",
+    "03 - Background/Neural Network & Deep Learning for Dummies.md",
+    "04 - References/Nudging_NN_AntilPrice.pdf",
+    "03 - Background/Navier Stokes Alpha Equation.md",
     "02 - MISC/Meeting Link.md",
+    "99 - CONFIG/Media/Pasted image 20250608212814.png",
+    "99 - CONFIG/Media/Pasted image 20250607205701.png",
+    "99 - CONFIG/Media/Pasted image 20250607204930.png",
+    "99 - CONFIG/Media/Pasted image 20250607203923.png",
+    "99 - CONFIG/Media/Pasted image 20250607201337.png",
+    "99 - CONFIG/Media/Pasted image 20250607201246.png",
+    "99 - CONFIG/Media/Pasted image 20250607200609.png",
+    "99 - CONFIG/Media/Pasted image 20250607195635.png",
+    "99 - CONFIG/Media/Pasted image 20250606214502.png",
+    "99 - CONFIG/Media/Pasted image 20250606214500.png",
+    "01 - Meetings/6-3.md",
+    "04 - References/data assimilation-simplified bardina (1).pdf",
+    "01 - Meetings/5-27.md",
+    "04 - References/LaytonEtAl.pdf",
+    "04 - References/TheNavierStokesAlphaModelOfFluidTurbulence.pdf",
+    "05 - Reports/NK 5-3 Report.md",
+    "05 - Reports",
+    "Excalidraw/Drawing 2025-05-29 11.25.27.excalidraw.md",
+    "Excalidraw",
+    "Untitled.md",
+    "04 - References",
+    "03 - Background",
+    "create a link.md",
+    "99 - CONFIG/Media",
     "99 - CONFIG/Templates/MeetingTemplate.md",
     "99 - CONFIG/Templates",
-    "02 - MISC",
-    "Welcome.md",
-    "99 - CONFIG",
-    "01 - Meetings"
+    "Welcome.md"
   ]
 }
