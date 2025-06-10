@@ -125,7 +125,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 278.5,
+    "collapsed": true
   },
   "right": {
     "id": "40c904051d379d98",
@@ -241,6 +242,14 @@
   },
   "active": "ffb34cd3b67f4399",
   "lastOpenFiles": [
+    "99 - CONFIG/Media/Pasted image 20250610191428.png",
+    "99 - CONFIG/Media/Pasted image 20250610190718.png",
+    "99 - CONFIG/Media/Pasted image 20250610190700.png",
+    "99 - CONFIG/Media/Pasted image 20250610185802.png",
+    "99 - CONFIG/Media/Pasted image 20250610185405.png",
+    "99 - CONFIG/Media/Pasted image 20250610184833.png",
+    "99 - CONFIG/Media/Pasted image 20250610181039.png",
+    "99 - CONFIG/Media/Pasted image 20250610180855.png",
     "03 - Background/Nudging NN summary.md",
     "03 - Background/Simplified Bardina Equation.md",
     "03 - Background/Neural Network & Deep Learning for Dummies.md",
@@ -250,13 +259,6 @@
     "99 - CONFIG/Media/Pasted image 20250608212814.png",
     "99 - CONFIG/Media/Pasted image 20250607205701.png",
     "99 - CONFIG/Media/Pasted image 20250607204930.png",
-    "99 - CONFIG/Media/Pasted image 20250607203923.png",
-    "99 - CONFIG/Media/Pasted image 20250607201337.png",
-    "99 - CONFIG/Media/Pasted image 20250607201246.png",
-    "99 - CONFIG/Media/Pasted image 20250607200609.png",
-    "99 - CONFIG/Media/Pasted image 20250607195635.png",
-    "99 - CONFIG/Media/Pasted image 20250606214502.png",
-    "99 - CONFIG/Media/Pasted image 20250606214500.png",
     "01 - Meetings/6-3.md",
     "04 - References/data assimilation-simplified bardina (1).pdf",
     "01 - Meetings/5-27.md",

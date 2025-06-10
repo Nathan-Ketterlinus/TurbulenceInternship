@@ -311,6 +311,110 @@ Unsupervised Learning Algorithms include:
 - Dimensionality Reduction
 	- Principle Component Analysis (PCA)
 
+---
+# From "Explained: Neural networks" by Larry Hardesty | MIT News Office
+
+"Most of today’s neural nets are organized into layers of nodes, and they’re “feed-forward,” meaning that data moves through them in only one direction."
+
+"The recent resurgence in neural networks — the deep-learning revolution — comes courtesy of the computer-game industry. The complex imagery and rapid pace of today’s video games require hardware that can keep up, and the result has been the graphics processing unit (GPU), which packs thousands of relatively simple processing cores on a single chip. It didn’t take long for researchers to realize that the architecture of a GPU is remarkably like that of a neural net.
+
+Modern GPUs enabled the one-layer networks of the 1960s and the two- to three-layer networks of the 1980s to blossom into the 10-, 15-, even 50-layer networks of today. That’s what the “deep” in “deep learning” refers to — the depth of the network’s layers. And currently, deep learning is responsible for the best-performing systems in almost every area of artificial-intelligence research."
+
+# From "What is a Neural Network" by IBM.com
+
+$\hat{y}$ is our predicted outcome
+
+![[Pasted image 20250610180855.png]]
+
+"Feedforward neural networks, or multi-layer perceptrons (MLPs), are what we’ve primarily been focusing on within this article. They are comprised of an input layer, a hidden layer or layers, and an output layer. While these neural networks are also commonly referred to as MLPs, it’s important to note that they are actually comprised of sigmoid neurons, not perceptrons, as most real-world problems are nonlinear. Data usually is fed into these models to train them, and they are the foundation for computer vision, [natural language processing](https://www.ibm.com/think/topics/natural-language-processing), and other neural networks.
+
+[Convolutional neural networks (CNNs)](https://www.ibm.com/think/topics/convolutional-neural-networks) are similar to feedforward networks, but they’re usually utilized for image recognition, pattern recognition, and/or computer vision. These networks harness principles from linear algebra, particularly matrix multiplication, to identify patterns within an image.
+
+[Recurrent neural networks (RNNs)](https://www.ibm.com/think/topics/recurrent-neural-networks) are identified by their feedback loops. These learning algorithms are primarily leveraged when using time-series data to make predictions about future outcomes, such as stock market predictions or sales forecasting."
+
+# From "Deep Learning Crash Course for Beginners" by freeCodeCamp.org
+![[Pasted image 20250610184833.png]]
+
+the sigmoid function suffers from the vanishing gradient problem
+	basically values can get squished so much that the gradient you minimize becomes inaccurate
+
+an alternative to the sigmoid function is the Tanh function:
+![[Pasted image 20250610185405.png]]
+its actually: $\tanh(x) = 2 \sigma(2x)-1$
+- but the derivative is steeper and still suffers from the vanishing gradient problem
+
+
+the ReLU function is actually non-linear!!
+but it suffers from the dying ReLU problem.
+- basically if the node isnt activated, it's weight doesn't get adjusted during backpropagation
+	- this can effectively "kill" nodes, where they dont really respond to anything
+
+can be fixed with:
+![[Pasted image 20250610185802.png]]
+
+which activation function to use?
+- if Binary Classification Problem: Sigmoid
+- otherwise: ReLU or modified ReLU
+
+on Gradient Descent:
+> To avoid getting stuck in a local minima, we use the proper ==Learning Rate==
+- basically a small scalar that shrinks the step size of your descent
+- make it adapt to the slope of the gradient!
+
+recall Stochastic Gradient Descent is when you adjust weights after batches of input!
+
+alternatives to Gradient Descent include:
+- Adagrad
+- RMSprop
+- Adaprop
+- Adam
+
+
+![[Pasted image 20250610190700.png]]
+
+![[Pasted image 20250610190718.png]]
+
+### Types of Learning
+1. Supervised Learning
+	- Algorithms designed to learn by example
+	- Models are trained on well-labeled data
+	- each example is a pair consisting of:
+		- Input object (usually a vector)
+		- Desired Output (Supervisory Signal)
+	- During training:
+		- SL algorithm searches for patterns that correlate with the desired output
+	- After training:
+		- takes in unseen inputs and determines which label to classify it to
+	- Two subcategories:
+		1. Classification
+			- "is email spam or not spam?"
+			- "what digit is this?"
+		2. Regression
+			- predict continuous values such as test scores, housing prices
+			- ![[Pasted image 20250610191428.png]]
+2. Unsupervised Learning
+	- used to manifest underlying patterns in data
+	- used in exploratory data analysis
+	- does not use labelled data, rather relies on the data features
+	- goal: analyze data and find important underlying patterns
+	- Two subcategories:
+		1. Clustering
+			- Process of grouping data into different clusters or groups
+			- Goal: to predict continuous values like test scores, etc
+			1. Partitional Clustering
+				- each data point can belong to a single cluster
+			2. Hierarchical Clustering
+				- clusters within clusters
+				- data point may belong to many clusters
+		2. Association
+			- Attempts to find relationships between different entities
+			- ex: market basket analysis
+			- applications include:
+				- Airbnb
+				- Amazon recommended products
+				- Credit Card Fraud Detection
+3. Reinforcement Learning
+	- 43:35
 
 # Resources Used:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aircAruvnKk?si=GOJXD48GrwkPEtAn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -318,3 +422,10 @@ Unsupervised Learning Algorithms include:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ilg3gGewQ5U?si=Hz8xoM5IrkV0OJtE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tIeHLnjs5U8?si=TfiZEJPhWJdyDact" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E0Hmnixke2g?si=_qENZI4hlmGBuREE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414
+
+https://www.ibm.com/think/topics/neural-networks
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VyWAvY2CF9c?si=nSH29hsWLO5SIMCp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
