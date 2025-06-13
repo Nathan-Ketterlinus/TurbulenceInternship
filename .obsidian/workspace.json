@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 - Background/Neural Network & Deep Learning for Dummies.md",
+                "file": "03 - Background/Pytorch for dummies.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -64,7 +64,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Neural Network & Deep Learning for Dummies"
+              "title": "Pytorch for dummies"
             }
           }
         ],
@@ -242,23 +242,24 @@
   },
   "active": "ffb34cd3b67f4399",
   "lastOpenFiles": [
+    "99 - CONFIG/Media/Pasted image 20250612211408.png",
+    "99 - CONFIG/Media/Pasted image 20250612211345.png",
+    "03 - Background/Neural Network & Deep Learning for Dummies.md",
+    "03 - Background/Pytorch for dummies.md",
+    "99 - CONFIG/Media/Pasted image 20250611212604.png",
+    "99 - CONFIG/Media/Pasted image 20250611212438.png",
+    "99 - CONFIG/Media/Pasted image 20250611212358.png",
+    "99 - CONFIG/Media/Pasted image 20250611211609.png",
+    "99 - CONFIG/Media/Pasted image 20250611211256.png",
+    "99 - CONFIG/Media/Pasted image 20250611211243.png",
+    "99 - CONFIG/Media/Pasted image 20250611211242.png",
     "99 - CONFIG/Media/Pasted image 20250610191428.png",
     "99 - CONFIG/Media/Pasted image 20250610190718.png",
-    "99 - CONFIG/Media/Pasted image 20250610190700.png",
-    "99 - CONFIG/Media/Pasted image 20250610185802.png",
-    "99 - CONFIG/Media/Pasted image 20250610185405.png",
-    "99 - CONFIG/Media/Pasted image 20250610184833.png",
-    "99 - CONFIG/Media/Pasted image 20250610181039.png",
-    "99 - CONFIG/Media/Pasted image 20250610180855.png",
     "03 - Background/Nudging NN summary.md",
     "03 - Background/Simplified Bardina Equation.md",
-    "03 - Background/Neural Network & Deep Learning for Dummies.md",
     "04 - References/Nudging_NN_AntilPrice.pdf",
     "03 - Background/Navier Stokes Alpha Equation.md",
     "02 - MISC/Meeting Link.md",
-    "99 - CONFIG/Media/Pasted image 20250608212814.png",
-    "99 - CONFIG/Media/Pasted image 20250607205701.png",
-    "99 - CONFIG/Media/Pasted image 20250607204930.png",
     "01 - Meetings/6-3.md",
     "04 - References/data assimilation-simplified bardina (1).pdf",
     "01 - Meetings/5-27.md",

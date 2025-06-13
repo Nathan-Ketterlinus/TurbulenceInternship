@@ -29,7 +29,7 @@ Obv Neural Networks mimic the brain (as we understand it), but there's 2 big que
 - consider our penultimate layer being used to represent larger structures, like the loop or vertical line in a 9
 - but now how do we determine if there's a loop?
 	- further subdivide the problem!
-	- in the second layer, i magine that each node represents segments of these larger structures, like a quarter circle or generally straight line component
+	- in the second layer, imagine that each node represents segments of these larger structures, like a quarter circle or generally straight line component
 > Pixels > Edges > Patterns > Digits
 ![[Pasted image 20250606194625.png]]
 
@@ -414,8 +414,162 @@ alternatives to Gradient Descent include:
 				- Amazon recommended products
 				- Credit Card Fraud Detection
 3. Reinforcement Learning
-	- 43:35
+	- Enables an ==agent== to learn in an interactive environment by trial & error based on feedback from its own actions & experiences
+	- Uses rewards & punishments as signals for positive & negative behavior.
+	- Goal: find a suitable model that maximizes total cumulative reward
+		- think chess, those AI plays mariokart videos, etc
+	- usually modelled as a ==Markov Decision Process==
 
+### Core problem in Deep Learning:
+- models should perform well on training AND novel data
+- how to avoid overfitting?
+	1. Dropout
+		- at every iteration through the NN, randomly remove some nodes & their connections
+		- captures more randomness, is a more robust predictive model
+	2. Dataset Augmentation
+		- More data -> better model
+		- thus make fake data
+		- apply transformations on existing dataset to get more data
+	3. Early 
+		- training error decreases steadily
+		- but validation error increases after a certain point
+		- stop training when these two cross!
+
+### NN Architectures
+#### Fully-Connected Feed Forward Neural Networks
+- each neuron is connected to every subsequent layer with no backward connections
+- take in fixed-size inputs
+- return fixed-size outputs
+
+#### Recurrent Neural Networks
+consider a situation like guessing where a ball will be in 2 seconds
+- this is impossible if we have no prior info on the ball
+	- what if its moving?
+	- which direction?
+	- how fast?
+	- etc
+- can be solved with RNNs, but information about the ==past== must be supplied
+	- Vanilla NNs can't handle sequential data
+	- they dont share parameters across time!
+- Sharing parameters gives the network the ability to look for a given feature ==everywhere in the sequence==, rather than in just a certain area
+
+RNNs need to be able to:
+- deal with variable length sequences
+- maintain sequence order
+- keep track of long-term dependencies
+- share parameters across the sequence
+
+they achieve these through:
+- a ==feedback loop== in the hidden layers![[Pasted image 20250611211243.png]]![[Pasted image 20250611211256.png]]
+ - basically they have a short-term memory
+
+how to train an RNN?
+- use backpropagation!
+	- but its applied for every ==sequence data point==
+	- Backpropagation through Time (BTT)
+
+![[Pasted image 20250611211609.png]]
+
+Short-term memory of an RNN is due to the Vanishing Gradient Problem
+- due to the nature of backpropagation
+	- if initial gradient is small, adjustments to the subsequent layers will be smaller giving rise to vanishing gradients
+
+can be solved with RNN variations:
+- Long Short Term Memory (LSTM)
+- Gated RNN (GRNN)
+
+- both capable of learning long-term dependencies through gates
+
+GRNN has:
+- Update Gate
+- Reset Gate
+
+LSTM has:
+- Update Gate
+- Reset Gate
+- Forget Gate
+
+#### Convolutional Neural Networks
+- inspired by the organization of neurons in visual cortex
+- good for images, audio, video
+
+Hidden Layers include:
+- Convolutional Layers
+- Pooling Layers
+- Fully-Connected Layers
+- Normalization Layers
+
+input is usually a 2D array (like from an image)
+output is usually 1D 
+
+![[Pasted image 20250611212358.png]]
+
+a convolution of two functions is their dot product!
+![[Pasted image 20250611212438.png]]
+
+##### Pooling:
+Reduce the number of neurons necessary in subsequent layers
+- Max pooling
+	![[Pasted image 20250611212604.png]]
+- Min pooling
+	the opposite lol
+
+process for a CNN is typically:
+1. Convolve the Image
+2. Pool the result
+3. Repeat
+4. Add a few layers to help classify the image
+5. Predict in the output layer
+
+## 5 Steps to EVERY Deep Learning Model
+1. Gathering Data
+	- pick appropriate data!
+	- bad data -> bad model
+	- make assumptions about the data you need!
+	- generally, # of examples = 10x # of model parameters
+	- data should have limited noise and no labeling errors
+2. Preprocessing the Data
+	-  split into subsets
+		1. Train on training data
+		2. Evaluate on validation data
+			- if few hyperparameters, then small validation set
+			- if many hyperparameters, then large validation set
+			- if no hyperparameters, then no validation set
+		3. Test on testing data
+	- format data into a form thats easy to work with!
+	- represent Missing data with a NaN or Null
+		- make sure your model can handle these, or impute these missing values!
+	- if dataset is wayy too big, just use a small subset!
+		- Downsample but upweight!
+			- faster convergence
+			- reduced disk space
+			- dataset is in similar ratio
+	- Feature scaling
+		- Normalization
+		- Standardization
+3. Training the Model
+	- Feed data
+	- Forward Propagation
+	- Loss Function
+	- Backpropagation
+4. Evaluation
+	- Test model on the validation set
+	- meant to be representative of the model in the real world
+5. Optimizing
+	a. Hyperparameter Tuning
+		increase number of epochs
+		adjust learning rate
+		initial conditions play a large role in determining your model's outcome
+	b. Addressing Overfitting
+		Get more data
+		Reduce Model size
+		Weight regularization
+		- L1 Regularization
+		- L2 Regularization
+	c. Data Augmentation
+	d. Dropout
+		randomly drop out some neurons
+		reduce co-dependency of neurons
 # Resources Used:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aircAruvnKk?si=GOJXD48GrwkPEtAn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IHZwWFHWa-w?si=o3o6YlLD0tb0WuWn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -429,3 +583,5 @@ https://www.ibm.com/think/topics/neural-networks
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VyWAvY2CF9c?si=nSH29hsWLO5SIMCp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+$$\sum_{1}^{n}(\text{predicted}_{i}-\text{actual}_{i})^{2}$$
